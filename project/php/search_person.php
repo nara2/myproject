@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     $con = mysqli_connect("localhost", "root", "","gps");
     mysqli_set_charset($con, "UTF8");
 
@@ -81,19 +81,16 @@
                 var shipId = '<?php echo json_encode($shipIdArray);?>';
                 var shipId1 = JSON.parse(shipId);
 
-                var shipId = '<?php echo json_encode($shipIdArray);?>';
-                var shipId1 = JSON.parse(shipId);
-
-                var na = "<?=$user_name?>";
+                var u_name = "<?=$user_name?>";
                 var str = "<div class = 'See_view'>"
-                str += "<h1 class = 'use_name'>" + na + "'s information</h1>"
+                str += "<h1 class = 'use_name'>" + u_name + "'s information</h1>"
                 str += "<table><tr><th>팔찌번호</th><th>이름</th><th>전화번호</th><th>생년월일</th><th>내부 위치</th><th>선박ID</th></tr>"
-                
+
                 for(var i = 0;i<id1.length;i++ ){
                     str += "<tr>"
                     str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td> <td><a href=\"http://202.31.147.236/webstandard/캡스톤/php/marker_map.php?bangle_id="+ id1[i] +"&name="+ name1[i]+"\">"+ section1[i] +"</a></td> <td>"+ shipId1[i] +"</td>"
                     str += "</tr>"
-                
+
                 }
 
                 str +="</table>"
