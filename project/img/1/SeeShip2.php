@@ -9,7 +9,7 @@
 
 	$result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section FROM bangle bn, beacon be where be.beacon_major=bn.request_major and be.ship_id = '$ship_id' and be.ship_id = bn.ship_id");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
   		array_push($response, array("<br>bn.bangle_id"=>$row[0], "be.beacon_section"=>$row[1]));
 		array_push($sectionArray, $row[1]);
@@ -41,8 +41,8 @@
 			text-align: center;
 			line-height: 30px;
 			font-size: 30px;
-			width: 100px; 
-			height: 30px; 
+			width: 100px;
+			height: 30px;
 			border: 3px solid #000000;
 			float : left;
 		}
@@ -50,12 +50,12 @@
 			text-align: center;
 			line-height: 30px;
 			font-size: 30px;
-			width: 100px; 
-			height: 30px; 
+			width: 100px;
+			height: 30px;
 			float: left;
 			border: 3px solid #000000;
 			margin-left : 10px;
-			
+
 		}
 		.img-cover {
 			position: absolute;
@@ -66,7 +66,7 @@
 		}
 		#area {
 			position : relative;
-			/* margin-left : 800px; 
+			/* margin-left : 800px;
             margin-top : 100px; */
             width : 25%;
             margin : 100px auto 0 auto;
@@ -103,9 +103,9 @@
 					<img src="ship_2.jpg">
 						<script>
 						var section = '<?php echo json_encode($sectionArray);?>';
-						var section1 = JSON.parse(section);	
+						var section1 = JSON.parse(section);
 						var ship = '<?php echo json_encode($ship_id);?>';
-						ship = JSON.parse(ship);	
+						ship = JSON.parse(ship);
 						var id = [["2_2등객실A", "width: 265px; height: 180px; left : 210px; top : 0px;", 102], // uibt
 							["2_2등객실B", "width: 265px; height: 167px; left : 210px; top: 181px;", 103], // jang
 							["2_1등객실A", "width: 265px; height: 109px; left : 210px; top: 348px;", 104], // lab
@@ -119,13 +119,13 @@
 						for(var i =0;i<section1.length;i++) {
 							for(var j=0;j<id.length;j++){
 								if(section1[i]==id[j][0] && section1[i].substr(0,1)== "2" && ship == "1") {
-									var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://202.31.147.236/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
+									var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://x.x.x.x/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
 									document.write(str);
 								}
 							}
 						}
 
-						var str = "<br><div><a id=\"left\" href=\"http://202.31.147.236/webstandard/캡스톤/img/1/SeeShip.php?ship_id="+ship+"\" style=\"text-decoration: none; color: black\">이전</a></div><div><a id=\"right\" href=\"http://202.31.147.236/webstandard/캡스톤/img/1/SeeShip3.php?ship_id="+ship+"\" style=\"text-decoration: none; color: black\">다음</a></div>";
+						var str = "<br><div><a id=\"left\" href=\"http://x.x.x.x/webstandard/캡스톤/img/1/SeeShip.php?ship_id="+ship+"\" style=\"text-decoration: none; color: black\">이전</a></div><div><a id=\"right\" href=\"http://x.x.x.x/webstandard/캡스톤/img/1/SeeShip3.php?ship_id="+ship+"\" style=\"text-decoration: none; color: black\">다음</a></div>";
 						document.write(str);
 						</script>
 				</div>
@@ -142,7 +142,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>

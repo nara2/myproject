@@ -11,7 +11,7 @@
     $messageArray = array();
     $response_timeArray = array();
     $checkedArray = array();
-    
+
     $result = mysqli_query($con, "SELECT * from sos");
     $response = array();
 
@@ -95,7 +95,7 @@
                 var j =1;
                 console.log(sos_id1);
                 for(var i = 0;i<sos_id1.length;i++){
-                    
+
                     if(fire1[i] == "1"){
                         fire1[i] = "화재";
                         // fire1[i] = document.write("<i class="fas fa-fire"></i>");
@@ -133,16 +133,16 @@
                         // j++;
                     }else  {
                         str += "<tr>"
-                        str += "<td>" + sos_id1[i] + "</td> <td>" + bangle_id1[i] + "</td> <td>" + fire1[i] + "</td> <td>" +fall1[i] +"</td> <td>" +leak1[i]+ "</td> <td>" +etc1[i]+"</td> <td>" +message1[i]+"</td> <td>" +response_time1[i]+"</td> <td>" +checked1[i]+"</td><td><a href ='http://202.31.147.236/webstandard/캡스톤/php/update.php?check="+sos_id1[i]+"'>체크</a></td>"
+                        str += "<td>" + sos_id1[i] + "</td> <td>" + bangle_id1[i] + "</td> <td>" + fire1[i] + "</td> <td>" +fall1[i] +"</td> <td>" +leak1[i]+ "</td> <td>" +etc1[i]+"</td> <td>" +message1[i]+"</td> <td>" +response_time1[i]+"</td> <td>" +checked1[i]+"</td><td><a href ='http://x.x.x.x/webstandard/캡스톤/php/update.php?check="+sos_id1[i]+"'>체크</a></td>"
                         str += "</tr>"
-                    
+
                         // j++;
                     }
-                    
+
                     // str += "<tr>"
-                    // str += "<td>" + sos_id1[i] + "</td> <td>" + bangle_id1[i] + "</td> <td>" + fire1[i] + "</td> <td>" +fall1[i] +"</td> <td>" +leak1[i]+ "</td> <td>" +etc1[i]+"</td> <td>" +message1[i]+"</td> <td>" +response_time1[i]+"</td> <td>" +checked1[i]+"</td><td><a href ='http://202.31.147.236/webstandard/캡스톤/php/update.php?check="+j+"'>체크</a></td>"
+                    // str += "<td>" + sos_id1[i] + "</td> <td>" + bangle_id1[i] + "</td> <td>" + fire1[i] + "</td> <td>" +fall1[i] +"</td> <td>" +leak1[i]+ "</td> <td>" +etc1[i]+"</td> <td>" +message1[i]+"</td> <td>" +response_time1[i]+"</td> <td>" +checked1[i]+"</td><td><a href ='http://x.x.x.x/webstandard/캡스톤/php/update.php?check="+j+"'>체크</a></td>"
                     // str += "</tr>"
-                
+
                     // j++;
                 }
                 str +="</table>"
@@ -163,7 +163,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>
@@ -297,4 +297,3 @@
     </div>
 </body>
 </html>
-

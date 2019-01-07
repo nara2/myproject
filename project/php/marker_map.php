@@ -4,7 +4,7 @@
 
     $bangle_id = $_GET["bangle_id"];
     $user_name = $_GET["name"];
-    
+
     $shipArray = array();
 	$floorArray = array();
 	$widthArray = array();
@@ -27,15 +27,15 @@
 ?>
 
 <style>
-	
+
 
 	#back {
         display: block;
 		text-align: center;
 		line-height: 30px;
 		font-size: 30px;
-		width: 100px; 
-		height: 30px; 
+		width: 100px;
+		height: 30px;
 		border: 3px solid #000000;
         text-decoration: none;
 		color: black;
@@ -43,7 +43,7 @@
         margin-left : 1px;
         padding :10px;
     }
-   
+
 	#ar {
         position : relative;
         /* width : 20%; */
@@ -77,7 +77,7 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/person19.css">
 	<link rel="stylesheet" href="../css/mobile1.css">
-	
+
 </head>
 <body>
     <div id="wrap">
@@ -115,13 +115,13 @@
 				var id1 = JSON.parse(bangle_id);
 
                 // document.write("<title>결과</title>");
-                
+
 				document.write("<div id = 'ar'>");
-				document.write("<img src=\"http://202.31.147.236/webstandard/캡스톤/img/"+ ship1[0] +"/ship_"+ floor1[0] +".jpg\">");
-				document.write("<div style=\"position: absolute; top:"+ (height1[0] - 30)+"; left: "+(width1[0] -46) +";\"><a href=\"http://202.31.147.236/webstandard/캡스톤/php/movement.php?bangle_id="+ id1 +"&ship_id="+ship1[0]+"&case="+1+"\"><img src=\"http://202.31.147.236/webstandard/캡스톤/img/marker.png\"></a></div>");
-				document.write("<a id=\"back\" href=\"http://202.31.147.236/webstandard/캡스톤/php/search_person.php?name="+name +"\">뒤로가기</a>");
+				document.write("<img src=\"http://x.x.x.x/webstandard/캡스톤/img/"+ ship1[0] +"/ship_"+ floor1[0] +".jpg\">");
+				document.write("<div style=\"position: absolute; top:"+ (height1[0] - 30)+"; left: "+(width1[0] -46) +";\"><a href=\"http://x.x.x.x/webstandard/캡스톤/php/movement.php?bangle_id="+ id1 +"&ship_id="+ship1[0]+"&case="+1+"\"><img src=\"http://x.x.x.x/webstandard/캡스톤/img/marker.png\"></a></div>");
+				document.write("<a id=\"back\" href=\"http://x.x.x.x/webstandard/캡스톤/php/search_person.php?name="+name +"\">뒤로가기</a>");
                 document.write("</div>");
-              
+
 			</script>
             </div>
         </div>
@@ -136,7 +136,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>

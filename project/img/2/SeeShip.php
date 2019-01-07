@@ -9,7 +9,7 @@
 
 $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship_id FROM bangle bn, beacon be where be.beacon_major=bn.request_major and be.ship_id = '$ship_id' and be.ship_id = bn.ship_id");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
   		array_push($response, array("<br>bn.bangle_id"=>$row[0], "be.beacon_section"=>$row[1], "be.ship_id"=>$row[2]));
 		array_push($sectionArray, $row[1]);
@@ -40,8 +40,8 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
 			text-align: center;
 			line-height: 30px;
 			font-size: 30px;
-			width: 100px; 
-			height: 30px; 
+			width: 100px;
+			height: 30px;
 			/* float: right; */
 			border: 3px solid #000000;
 		}
@@ -51,7 +51,7 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
 			background-color: rgba(0, 0, 0, 0.2);
 		}
 		.tb{
-            
+
 		}
 		#area {
 			position : relative;
@@ -93,9 +93,9 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
 					<img class = "tb" src="ship_1.jpg">
 					<script>
 					var section = '<?php echo json_encode($sectionArray);?>';
-					var section1 = JSON.parse(section);	
+					var section1 = JSON.parse(section);
 					var ship = '<?php echo json_encode($ship_id);?>';
-					ship = JSON.parse(ship);	
+					ship = JSON.parse(ship);
 					var id = [["1_남자휴게실", "width: 436px; height: 240px; left : 0px; top : 0px;", 11], // uibt
 							 ["1_창고C", "width: 175px; height: 543px; left : 440px; top: 0px;", 12],
 							 ["1_창고B", "width: 175px; height: 380px; left : 440px; top: 615px;", 13],
@@ -123,11 +123,11 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
 							 ["1_참가자회의실E", "width: 142px; height: 74px; left : 0px; top: 313px;", 31],
 							 ["1_참가자회의실F", "width: 142px; height: 74px; left : 0px; top: 245px;", 32]];
 
-						
+
                         for(var i =0;i<section1.length;i++) {
 						for(var j=0;j<id.length;j++){
 							if(section1[i]==id[j][0] && section1[i].substr(0,1)== "1" && ship == "2") {
-								var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://202.31.147.236/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
+								var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://x.x.x.x/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
 								document.write(str);
 							}
 						}
@@ -147,7 +147,7 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>
@@ -281,5 +281,3 @@ $result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section, be.ship
     </div>
 </body>
 </html>
-
-

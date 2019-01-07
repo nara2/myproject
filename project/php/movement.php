@@ -15,7 +15,7 @@
 
 	$result = mysqli_query($con, "SELECT mv.time, mv.bangle_id, us.user_name, be.beacon_section, be.ship_id FROM beacon be, movement mv, user us where mv.request_major = be.beacon_major and be.ship_id = '$ship_id' and us.bangle_id= '$bangle_id' and mv.bangle_id = '$bangle_id' order by 1;");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
 		array_push($response, array("<br>mv.time"=>$row[0], "mv.bangle_id"=>$row[1], "us.user_name"=>$row[2], "be.beacon_section"=>$row[3], "be.ship_id"=>$row[4]));
 		array_push($timeArray, $row[0]);
@@ -82,21 +82,21 @@
                 var str = "<div class = 'See_view'>"
                 str += "<h1 class = 'use_name'>" + na + "'s movement</h1>"
                 str += "<table><tr><th>TIME</th><th>BANGLE_ID</th><th>NAME</th><th>SECTION</th><th>SHIP_ID</th></tr>"
-                
+
                 for(var i = 0;i<id1.length;i++ ){
                     str += "<tr>"
                     str += "<td>" + time1[i] + "</td> <td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" +section1[i] +"</td> <td>"+ shipId1[i] +"</td> </tr>"
-                
+
                 }
 
                 str +="</table></div>"
 
                 document.write(str);
                 if(casetype==1){
-                    document.write("<a class = 'back' style=\"display: block\" href=\"http://202.31.147.236/webstandard/캡스톤/php/search_person.php?name="+name1[0] +"\">뒤로가기</a>");
+                    document.write("<a class = 'back' style=\"display: block\" href=\"http://x.x.x.x/webstandard/캡스톤/php/search_person.php?name="+name1[0] +"\">뒤로가기</a>");
                 }
                 else{
-                    document.write("<a class = 'back' style=\"display: block\" href=\"http://202.31.147.236/webstandard/캡스톤/php/person_move.php?name="+name1[0] +"\">뒤로가기</a>");
+                    document.write("<a class = 'back' style=\"display: block\" href=\"http://x.x.x.x/webstandard/캡스톤/php/person_move.php?name="+name1[0] +"\">뒤로가기</a>");
                 }
                 // str +="</table></div>"
 
@@ -115,7 +115,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>

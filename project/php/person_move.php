@@ -14,7 +14,7 @@
 
 	$result = mysqli_query($con, "SELECT DISTINCT us.bangle_id, us.user_name, us.user_phone, us.user_birth, be.beacon_section, be.ship_id FROM bangle bn, beacon be, user us where us.user_name='$user_name' and be.beacon_major= bn.request_major and bn.bangle_id = us.bangle_id and bn.ship_id = be.ship_id;");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
 		array_push($response, array("<br>bn.bangle_id"=>$row[0], "us.user_name"=>$row[1], "us.user_phone"=>$row[2], "us.user_birth"=>$row[3], "be.beacon_section"=>$row[4], "be.ship_id"=>$row[5]));
 		array_push($idArray, $row[0]);
@@ -85,12 +85,12 @@
                 var str = "<div class = 'See_view'>"
                 str += "<h1 class = 'use_name'>" + na + "'s information</h1>"
                 str += "<table><tr><th>팔찌번호</th><th>이름</th><th>전화번호</th><th>생년월일</th><th>내부 위치</th><th>선박ID</th><th class=\"wide\"></th></tr>"
-                
+
                 for(var i = 0;i<id1.length;i++ ){
                     str += "<tr>"
-                    str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td> <td class=\"wide\">"+ section1[i] +"</td> <td>"+ shipId1[i] +"</td><td class=\"wide\"><a href=\"http://202.31.147.236/webstandard/캡스톤/php/movement.php?bangle_id="+ id1[i] +"&ship_id="+shipId1[i]+"&case="+2+"\">동선보기</a>"
+                    str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td> <td class=\"wide\">"+ section1[i] +"</td> <td>"+ shipId1[i] +"</td><td class=\"wide\"><a href=\"http://x.x.x.x/webstandard/캡스톤/php/movement.php?bangle_id="+ id1[i] +"&ship_id="+shipId1[i]+"&case="+2+"\">동선보기</a>"
                     str += "</tr>"
-                    
+
                 }
 
                 str +="</table>"
@@ -98,7 +98,7 @@
                 document.write(str);
 
             </script>
-               
+
             </div>
         </div>
         <!-- footer영역 -->
@@ -112,7 +112,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>

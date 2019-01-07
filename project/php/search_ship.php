@@ -1,6 +1,6 @@
 <?php
 if($name_major = $_GET["ship"]){
-  
+
         $conn = mysqli_connect("localhost", "root", "","info1");
         mysqli_set_charset($conn, "UTF8");
         $result = mysqli_query($conn,"SELECT * FROM info1 WHERE title = '$name_major';");
@@ -57,8 +57,8 @@ if($name_major = $_GET["ship"]){
             <div id="map">
             <script src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=31f6c924f8cacbc895955daba5fbccd7"></script>
             <script>
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-                            mapOption = { 
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                            mapOption = {
                             center: new daum.maps.LatLng(36.3504119, 127.38454750000005), // 지도의 중심좌표
                             level: 13 // 지도의 확대 레벨
                             };
@@ -67,19 +67,19 @@ if($name_major = $_GET["ship"]){
 
                 // 마커 이미지의 이미지 주소입니다
                 var seeimageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png';
-                var imageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png'; 
-                    
+                var imageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png';
 
 
-            
+
+
                 // 마커 이미지의 이미지 크기 입니다
-                var imageSize = new daum.maps.Size(30, 60); 
+                var imageSize = new daum.maps.Size(30, 60);
 
-                // 마커 이미지를 생성합니다     
+                // 마커 이미지를 생성합니다
                 var markerImage = new daum.maps.MarkerImage(seeimageSrc, imageSize);
                 var x = "<?=$x?>";
                 var y = "<?=$y?>";
-                var markerPosition  = new daum.maps.LatLng(x, y); 
+                var markerPosition  = new daum.maps.LatLng(x, y);
                 var marktitle ="<?=$title?>";
                 var markid = "<?=$id?>";
                 var outport = "<?=$outport?>";
@@ -90,25 +90,25 @@ if($name_major = $_GET["ship"]){
                     position: markerPosition, // 마커를 표시할 위치
                     title : marktitle, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
                     id : markid,
-                    image : markerImage // 마커 이미지 
+                    image : markerImage // 마커 이미지
                 });
 
-            
+
             var infowindow = new daum.maps.InfoWindow({
                 content: "<div><p>배이름 : " + marktitle + "</p><p>출항지 : " + outport +"</p><p>입항지 : " + inport  // 인포윈도우에 표시할 내용
             });
-            
+
                 daum.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
                 daum.maps.event.addListener(marker, 'rightclick', makeOutListener(infowindow));
-            
-            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
             function makeOverListener(map, marker, infowindow) {
                 return function() {
                     infowindow.open(map, marker);
                 };
             }
 
-            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다
             function makeOutListener(infowindow) {
                 return function() {
                     infowindow.close();
@@ -128,7 +128,7 @@ if($name_major = $_GET["ship"]){
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>

@@ -9,7 +9,7 @@
 
 	$result = mysqli_query($con, "SELECT be.beacon_major, be.beacon_section FROM bangle bn, beacon be where be.beacon_major=bn.request_major and be.ship_id = '$ship_id' and be.ship_id = bn.ship_id");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
   		array_push($response, array("<br>bn.bangle_id"=>$row[0], "be.beacon_section"=>$row[1]));
 		array_push($sectionArray, $row[1]);
@@ -40,8 +40,8 @@
 			text-align: center;
 			line-height: 30px;
 			font-size: 30px;
-			width: 100px; 
-			height: 30px; 
+			width: 100px;
+			height: 30px;
 			/* float: right; */
 			border: 3px solid #000000;
 		}
@@ -51,7 +51,7 @@
 			background-color: rgba(0, 0, 0, 0.2);
 		}
 		.tb{
-            
+
 		}
 		#area {
 			position : relative;
@@ -93,9 +93,9 @@
 					<img class = "tb" src="ship_1.png">
 					<script>
 					var section = '<?php echo json_encode($sectionArray);?>';
-								var section1 = JSON.parse(section);	
+								var section1 = JSON.parse(section);
 								var ship = '<?php echo json_encode($ship_id);?>';
-								ship = JSON.parse(ship);	
+								ship = JSON.parse(ship);
                                 var id = [
                                          ["1_단상1", "width: 396px; height: 97px; left : 276px; top : 2px;", 311],
                                          ["1_단상2", "width: 396px; height: 97px; left : 673px; top : 2px;", 312],
@@ -120,7 +120,7 @@
 					for(var i =0;i<section1.length;i++) {
 						for(var j=0;j<id.length;j++){
 							if(section1[i]==id[j][0] && section1[i].substr(0,1)== "1" && ship == "4") {
-								var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://202.31.147.236/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
+								var str = "<div><a class=\"img-cover\" style=\""+ id[j][1] +"\" href=\"http://x.x.x.x/webstandard/캡스톤/php/bangleinfo.php?ship="+ship+"&beacon_major="+id[j][2]+"\"></a></div>";
 								document.write(str);
 							}
 						}
@@ -140,7 +140,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>
@@ -274,5 +274,3 @@
     </div>
 </body>
 </html>
-
-

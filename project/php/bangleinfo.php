@@ -15,7 +15,7 @@
 
 	$result = mysqli_query($con, "SELECT bn.bangle_id, be.beacon_section, us.user_name, us.user_phone, us.user_birth, bn.ship_id, be.beacon_floor FROM bangle bn, beacon be, user us where be.beacon_major='$beacon_major' and bn.request_major='$beacon_major' and us.bangle_id = bn.bangle_id and be.ship_id = '$ship_id' and be.ship_id = bn.ship_id;");
 	$response = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
   		array_push($response, array("<br>bn.bangle_id"=>$row[0], "be.beacon_section"=>$row[1], "us.user_name"=>$row[2], "us.user_phone"=>$row[3], "us.user_birth"=>$row[4], "bn.ship_id"=>$row[5], "be.beacon_floor"=>$row[6]));
 		array_push($idArray, $row[0]);
@@ -26,7 +26,7 @@
 		array_push($shipArray, $row[5]);
 		array_push($floorArray, $row[6]);
 	}
-    
+
     //echo json_encode(array("response"=>$response),JSON_UNESCAPED_UNICODE);
 
 	mysqli_close($con);
@@ -57,13 +57,13 @@
 		line-height: 30px;
 		font-size: 15px;
 		width: 20%;
-		height: 30px; 
+		height: 30px;
 		border: 3px solid #000000;
         text-decoration: none;
         color: black;
 	}
     </style> -->
- 
+
 </head>
 <body>
     <div id="wrap">
@@ -86,7 +86,7 @@
                 <h1>승객 위치기반 서비스</h1>
             </div>
             <div id="map">
-           
+
             <script>
                 var id = '<?php echo json_encode($idArray);?>';
                 var id1 = JSON.parse(id);
@@ -102,24 +102,24 @@
                 ship = JSON.parse(ship);
                 var floor = '<?php echo json_encode($floorArray);?>';
                 floor = JSON.parse(floor);
-            
+
                 document.write("<h1 class = 'section'>" + section1[0] + "</h1>");
                 var str = "<div id = 'see_view'>"
                 // str += "<h1 class = 'use_name'>" + na + "</h1>"
                 // document.write("<h1 class = 'section'>" + section1[0] + "</h1>");
                 str = "<table><tr><th>팔찌번호</th><th>이름</th><th>전화번호</th><th>생년월일</th></tr>"
-                
+
                 for(var i = 0;i<id1.length;i++ ){
                     str += "<tr>"
                     str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td>"
                     str += "</tr>"
-                
+
                 }
                 str += "</table>";
                 str += "</div>"
                 document.write(str);
                 floor = floor[0] == 1 ? "" : floor[0];
-                document.write("<a class ='back_ca' href=\"http://202.31.147.236/webstandard/캡스톤/img/"+ship[0] +"/SeeShip"+floor+".php?ship_id="+ship[0]+"\">뒤로가기</a>");
+                document.write("<a class ='back_ca' href=\"http://x.x.x.x/webstandard/캡스톤/img/"+ship[0] +"/SeeShip"+floor+".php?ship_id="+ship[0]+"\">뒤로가기</a>");
             </script>
             </div>
         </div>
@@ -134,7 +134,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>
@@ -283,10 +283,9 @@
 		line-height: 30px;
 		font-size: 15px;
 		width: 20%;
-		height: 30px; 
+		height: 30px;
 		border: 3px solid #000000;
         text-decoration: none;
         color: black;
 	}
 </style> -->
-

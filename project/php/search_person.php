@@ -88,7 +88,7 @@
 
                 for(var i = 0;i<id1.length;i++ ){
                     str += "<tr>"
-                    str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td> <td><a href=\"http://202.31.147.236/webstandard/캡스톤/php/marker_map.php?bangle_id="+ id1[i] +"&name="+ name1[i]+"\">"+ section1[i] +"</a></td> <td>"+ shipId1[i] +"</td>"
+                    str += "<td>" + id1[i] + "</td> <td>" + name1[i] + "</td> <td>" + phone1[i] + "</td> <td>" +birth1[i] +"</td> <td><a href=\"http://x.x.x.x/webstandard/캡스톤/php/marker_map.php?bangle_id="+ id1[i] +"&name="+ name1[i]+"\">"+ section1[i] +"</a></td> <td>"+ shipId1[i] +"</td>"
                     str += "</tr>"
 
                 }
@@ -110,7 +110,7 @@
                     <dd><a href="https://www.google.co.kr/?hl=ko"><i class="fab fa-google-plus-g"></i></a></dd>
                     <dd><a href="https://www.instagram.com/?hl=ko"><i class="fab fa-instagram"></i></a></dd>
                 </dl>
-                <p class = "copy">Powered by 4힉년 2반</a></p>
+                <p class = "copy">Powered by 4학년 2반</a></p>
                 <p class = "logout"><a href="logout.php">로그아웃</a></p>
                 <p class = "up"><a href="#header"><i class="far fa-hand-point-up"></i>위로<i class="far fa-hand-point-up"></i></a></p>
             </div>
