@@ -22,6 +22,7 @@ db = MySQLdb.connect(host, id, pw, db, port);
 
 curs = db.cursor();
 
+start = 0;
 rssi = 999
 major = 0;
 count = 0;
@@ -85,12 +86,14 @@ while True:
     if(major == rssi):
         pass;
     else:
-        if major !=0 or rssi !=999:
+        if start != 0 and  (major !=0 or rssi !=999):
             curs.execute("UPDATE bangle SET request_rssi = (%d) WHERE bangle_id = 1" %int(rssi));
             curs.execute("UPDATE bangle SET request_major = (%d) WHERE bangle_id = 1" %int(major));
-	if major !=0 or rssi !=999:
+	if start == 0 and (major !=0 or rssi !=999):
 	    curs.execute("INSERT INTO movement(bangle_id, request_major, time) values(1, (%d), now())" %int(major));
 	    count = 0;
+
+	start += 1;
     db.commit()
     major = 0;
     rssi = 999;
